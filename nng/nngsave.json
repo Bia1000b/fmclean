@@ -209,7 +209,8 @@
     },
     {
       "lean": "example (P Q R : Prop) : (P → (Q → R)) → ((P → Q) → (P → R)) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intro k,\r\nintro w,\r\nintro p,\r\nhave q := w(p),\r\napply k,\r\nexact p,\r\nexact q,"
     },
     {
       "lean": "lemma imp_trans (P Q R : Prop) : (P → Q) → ((Q → R) → (P → R)) :=\n",
