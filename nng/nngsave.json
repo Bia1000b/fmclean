@@ -244,11 +244,13 @@
     },
     {
       "lean": "lemma iff_trans (P Q R : Prop) : (P ↔ Q) → (Q ↔ R) → (P ↔ R) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intro h,\r\nintro k,\r\ncases h with j t,\r\ncases k with w i,\r\nsplit,\r\nintro p,\r\nhave q := j(p),\r\nhave r := w(q),\r\nexact r,\r\nintro r',\r\nhave q' := i(r'),\r\nhave p' := t(q'),\r\nexact p',\r\n"
     },
     {
       "lean": "lemma iff_trans (P Q R : Prop) : (P ↔ Q) → (Q ↔ R) → (P ↔ R) :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "intro h,\r\nintro k,\r\ncases h with j t,\r\ncases k with w i,\r\nsplit,\r\nintro p,\r\nhave q := j(p),\r\nhave r := w(q),\r\nexact r,\r\nintro r',\r\nhave q' := i(r'),\r\nhave p' := t(q'),\r\nexact p',\r\n"
     },
     {
       "lean": "example (P Q : Prop) : Q → (P ∨ Q) :=\n",
