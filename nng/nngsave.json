@@ -329,7 +329,8 @@
     },
     {
       "lean": "lemma add_right_eq_zero {a b : mynat} : a + b = 0 → a = 0 :=\n",
-      "editorText": "sorry"
+      "isSolved": true,
+      "editorText": "cases a with d,\r\nintro h,\r\nrefl,\r\nintro h,\r\nrw succ_add at h,\r\nhave hc := succ_ne_zero (d + b),\r\ncontradiction,"
     },
     {
       "lean": "theorem add_one_eq_succ (d : mynat) : d + 1 = succ d :=\n",
