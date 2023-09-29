@@ -107,7 +107,12 @@ end
 theorem impl_as_contrapositive :
   (P → Q) → (¬Q → ¬P)  :=
 begin
-  sorry,
+  intro pq,
+  intro nq,
+  intro p,
+  have q := pq p,
+  have k : false := nq q,
+  exact k,
 end
 
 theorem impl_as_contrapositive_converse :
