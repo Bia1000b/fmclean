@@ -52,7 +52,12 @@ end
 theorem disj_comm :
   (P ∨ Q) → (Q ∨ P)  :=
 begin
-  sorry,
+  intro pq,
+  cases pq with hp hq,
+  right,
+  exact hp,
+  left,
+  exact hq,
 end
 
 theorem conj_comm :
