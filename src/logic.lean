@@ -303,7 +303,25 @@ end
 theorem demorgan_disj_law :
   ¬(P∨Q) ↔ (¬P ∧ ¬Q)  :=
 begin
-  sorry,
+  split,
+  intro npq,
+  split,
+  intro p,
+  apply npq,
+  left,
+  exact p,
+  intro q,
+  apply npq,
+  right,
+  exact q,
+  intro npnq,
+  intro pq,
+  cases npnq,
+  cases pq,
+  apply npnq_left,
+  exact pq,
+  apply npnq_right,
+  exact pq,
 end
 
 ------------------------------------------------
