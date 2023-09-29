@@ -131,7 +131,21 @@ end
 theorem contrapositive_law :
   (P → Q) ↔ (¬Q → ¬P)  :=
 begin
-  sorry,
+  split,
+  intro pq,
+  intro nq,
+  intro p,
+  have q := pq p,
+  have k : false := nq q,
+  exact k,
+  intro nqnp,
+  intro p,
+  by_cases h: Q,
+  exact h,
+  have np := nqnp h,
+  have k : false := np p,
+  exfalso,
+  exact k,
 end
 
 
