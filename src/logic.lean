@@ -533,7 +533,12 @@ end
 theorem demorgan_exists_converse :
   (∀x, ¬P x) → ¬(∃x, P x)  :=
 begin
-  sorry,
+  intro h,
+  intro k,
+  cases k with a ha,
+  have w := h(a),
+  apply w,
+  exact ha,
 end
 
 theorem demorgan_forall :
