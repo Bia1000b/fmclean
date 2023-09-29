@@ -622,7 +622,14 @@ end
 theorem exists_as_neg_forall_converse :
   ¬(∀x, ¬P x) → (∃x, P x)  :=
 begin
-  sorry,
+  intro h,
+  by_contradiction kboom,
+  apply h,
+  intro a,
+  intro p,
+  apply kboom,
+  existsi a,
+  exact p,
 end
 
 theorem forall_as_neg_exists_law :
