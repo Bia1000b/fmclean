@@ -656,13 +656,28 @@ end
 theorem exists_conj_as_conj_exists :
   (∃x, P x ∧ Q x) → (∃x, P x) ∧ (∃x, Q x)  :=
 begin
-  sorry,
+  intro h,
+  cases h with a k,
+  cases k with pa qa,
+  split,
+  existsi a,
+  exact pa,
+  existsi a,
+  exact qa,
 end
 
 theorem exists_disj_as_disj_exists :
   (∃x, P x ∨ Q x) → (∃x, P x) ∨ (∃x, Q x)  :=
 begin
-  sorry,
+  intro h,
+  cases h with a k,
+  cases k,
+  left,
+  existsi a,
+  exact k,
+  right,
+  existsi a,
+  exact k,
 end
 
 theorem exists_disj_as_disj_exists_converse :
