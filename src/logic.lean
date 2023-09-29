@@ -279,7 +279,25 @@ end
 theorem demorgan_conj_law :
   ¬(P∧Q) ↔ (¬Q ∨ ¬P)  :=
 begin
-  sorry,
+  split,
+  intro npq,
+  by_cases q : Q,
+  right,
+  intro p,
+  apply npq,
+  split,
+  exact p,
+  exact q,
+  left,
+  exact q,
+  intro nqnp,
+  intro pq,
+  cases pq,
+  cases nqnp,
+  apply nqnp,
+  exact pq_right,
+  apply nqnp,
+  exact pq_left,
 end
 
 theorem demorgan_disj_law :
