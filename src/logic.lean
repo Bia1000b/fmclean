@@ -78,7 +78,13 @@ end
 theorem impl_as_disj_converse :
   (¬P ∨ Q) → (P → Q)  :=
 begin
-  sorry,
+  intro npq,
+  intro p,
+  cases npq,
+  have k : false := npq p,
+  exfalso,
+  exact k,
+  exact npq,
 end
 
 theorem disj_as_impl :
