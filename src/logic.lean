@@ -90,7 +90,13 @@ end
 theorem disj_as_impl :
   (P ∨ Q) → (¬P → Q)  :=
 begin
-  sorry,
+  intro pq,
+  intro np,
+  cases pq,
+  have k : false := np pq,
+  exfalso,
+  exact k,
+  exact pq,
 end
 
 
