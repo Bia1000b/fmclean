@@ -21,13 +21,28 @@ end
 theorem doubleneg_elim :
   ¬¬P → P  :=
 begin
-  sorry,
+  intro nnp,
+  by_cases h : P,
+  exact h,
+  have k : false := nnp h,
+  exfalso,
+  exact k,
 end
 
 theorem doubleneg_law :
   ¬¬P ↔ P  :=
 begin
-  sorry,
+  split,
+  intro nnp,
+  by_cases h : P,
+  exact h,
+  have k : false := nnp h,
+  exfalso,
+  exact k,
+  intro p,
+  intro np,
+  have w : false := np p,
+  exact w,
 end
 
 ------------------------------------------------
